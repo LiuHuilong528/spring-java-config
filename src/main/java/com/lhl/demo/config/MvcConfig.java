@@ -6,12 +6,17 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+
+/**
+ * SpringMVC-servlet.xml 相同
+ * @author datatoucher
+ *
+ */
 
 @SuppressWarnings("deprecation")
 @EnableWebMvc
@@ -37,10 +42,10 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 	 * 
 	 * @return
 	 */
-	@Bean(name = "multipartResolver")
-	public CommonsMultipartResolver getMultipartResolver() {
-		return new CommonsMultipartResolver();
-	}
+//	@Bean(name = "multipartResolver")
+//	public CommonsMultipartResolver getMultipartResolver() {
+//		return new CommonsMultipartResolver();
+//	}
 
 	/**
 	 * 返回字符串乱码——统一返回UTF-8编码
